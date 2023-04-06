@@ -1,0 +1,9 @@
+file_format: "1"
+id: pechatalo
+name: Pechatalo
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://wiki.makerdiary.com/nrf52840-m2/
