@@ -2,10 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: microsoft
+      url-base: https://github.com/microsoft
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: uf2
+      remote: microsoft
+      path: tools/uf2
+      clone-depth: 1
   self:
     path: config
