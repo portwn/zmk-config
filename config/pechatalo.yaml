@@ -1,7 +1,0 @@
-identifier: pechatalo
-name: pechatalo
-type: keyboard
-arch: arm
-toolchain:
-  - zephyr
-  - zmk
