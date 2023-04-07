@@ -1,7 +1,0 @@
-identifier: akortho
-name: akortho
-type: keyboard
-arch: arm
-toolchain:
-  - zephyr
-  - zmk
