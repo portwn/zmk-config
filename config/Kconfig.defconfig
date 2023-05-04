@@ -25,3 +25,13 @@ config USB_DEVICE_STACK
 	default y
 
 endif # USB
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
