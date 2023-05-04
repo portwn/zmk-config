@@ -17,7 +17,18 @@
 		zephyr,flash = &flash0;
 		zmk,battery = &vbatt;
 		zmk,kscan = &kscan0;
+		zmk,backlight = &backlight;
 	};
+	
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        label = "Backlight LEDs";
+        pwm_led_0 {
+            pwms = <&pwm0 20>;
+            label = "Backlight LED 0";
+        };
+    };
+
 
 	vbatt: vbatt {
 		compatible = "zmk,battery-voltage-divider";
@@ -139,21 +150,4 @@
     status = "okay";
     ch0-pin = <20>;
     ch0-inverted;
-};
-
-/ {
-    backlight: pwmleds {
-        compatible = "pwm-leds";
-        label = "Backlight LEDs";
-        pwm_led_0 {
-            pwms = <&pwm0 20>;
-            label = "Backlight LED 0";
-        };
-    };
-};
-
-/ {
-    chosen {
-        zmk,backlight = &backlight;
-    };
 };
