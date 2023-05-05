@@ -178,10 +178,10 @@
 		group1 {
 			psels = <NRF_PSEL(PWM_OUT0, 0, 15)>,
 				<NRF_PSEL(PWM_OUT1, 0, 17)>,
-				<NRF_PSEL(PWM_OUT2, 0, 20)>;
+				<NRF_PSEL(PWM_OUT2, 0, 20)>,
 				//<NRF_PSEL(PWM_OUT3, 1, 2)>,
 				<NRF_PSEL(PWM_OUT4, 0, 24)>,
-				//<NRF_PSEL(PWM_OUT5, 1, 0)>;
+				//<NRF_PSEL(PWM_OUT5, 1, 0)>,
 				<NRF_PSEL(PWM_OUT6, 0, 13)>;
 				
 			nordic,invert;
