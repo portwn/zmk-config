@@ -17,9 +17,10 @@
 		zephyr,flash = &flash0;
 		zmk,battery = &vbatt;
 		zmk,kscan = &kscan0;
+		zmk,backlight = &backlight;
 	};
 
-	pwmleds {
+	backlight: pwmleds{
 			compatible = "pwm-leds";
 			pwm_led0_green: pwm_led_0 {
 				pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
