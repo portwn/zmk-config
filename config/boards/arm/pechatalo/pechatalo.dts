@@ -169,3 +169,12 @@
 	};
 
 };
+
+/ {
+     leds {
+             compatible = "gpio-leds";
+             led_0 {
+                     gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>
+             };
+     };
+};
