@@ -24,14 +24,17 @@
 			compatible = "pwm-leds";
 			status = "okay";
 			pwm_led0_green: pwm_led_0 {
+				status = "okay";
 				pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 				label = "Green PWM LED 0";
 			};
 			pwm_led1_red: pwm_led_1 {
+				status = "okay";
 				pwms = <&pwm0 1 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 				label = "Red PWM LED 1";
 			};
 			pwm_led2_blue: pwm_led_2 {
+				status = "okay";
 				pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 				label = "Blue PWM LED 2";
 			};
