@@ -22,7 +22,7 @@
 
 	backlight: pwmleds{
 			compatible = "pwm-leds";
-			status = "okay"
+			status = "okay";
 			pwm_led0_green: pwm_led_0 {
 				pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 				label = "Green PWM LED 0";
