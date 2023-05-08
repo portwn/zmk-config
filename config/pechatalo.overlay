@@ -5,6 +5,7 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <nordic/nrf52840_qiaa.dtsi>
 
 / {
     chosen {
@@ -15,11 +16,10 @@
 	
 	backlight: pwmleds {
         compatible = "pwm-leds";
-        label = "Backlight LEDs";
-        pwm_led_0 {
-            pwms = <&pwm0 15>;
-            label = "Backlight LED 0";
-        };
+        pwm_led0_green: pwm_led_0 {
+			pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Green PWM LED 0";
+		};
     };
 
     default_transform: matrix_transform {
@@ -71,6 +71,24 @@
 };
 
 &pwm0 {
-    status = "okay";
-    ch0-pin = <15>;
+	status = "okay";
+	pinctrl-0 = <&pwm0_default>;
+	pinctrl-1 = <&pwm0_sleep>;
+	pinctrl-names = "default", "sleep";
+};
+
+&pinctrl {
+	pwm0_default: pwm0_default {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 15);
+			nordic,invert;
+		};
+	};
+
+	pwm0_sleep: pwm0_sleep {
+		group1 {
+			psels = <NRF_PSEL(PWM_OUT0, 0, 15);
+			low-power-enable;
+		};
+	};
 };
