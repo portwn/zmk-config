@@ -27,6 +27,10 @@
             pwms = <&pwm0 15 10000 PWM_POLARITY_NORMAL>;
             label = "Backlight LED 0";
         };
+		pwm_led_1 {
+            pwms = <&pwm0 24 10000 PWM_POLARITY_NORMAL>;
+            label = "Backlight LED 1";
+        };
     };
 
 	vbatt: vbatt {
@@ -148,5 +152,6 @@
 &pwm0 {
     status = "okay";
     ch0-pin = <15>;
+	ch1-pin = <24>;
     /* ch0-inverted; */
 };
