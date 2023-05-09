@@ -18,6 +18,7 @@
 		zmk,battery = &vbatt;
 		zmk,kscan = &kscan0;
 		zmk,backlight = &backlight;
+		zephyr,console = &cdc_acm_uart0;
 	};
 	
 	backlight: pwmleds {
@@ -154,4 +155,11 @@
     ch0-pin = <15>;
 	ch1-pin = <24>;
     /* ch0-inverted; */
+};
+
+&zephyr_udc0 {
+     cdc_acm_uart0: cdc_acm_uart0 {
+             compatible = "zephyr,cdc-acm-uart";
+             label = "CDC_ACM_0";
+     };
 };
