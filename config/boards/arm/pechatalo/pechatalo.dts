@@ -18,7 +18,7 @@
 		zmk,battery = &vbatt;
 		zmk,kscan = &kscan0;
 		zmk,backlight = &backlight;
-		zephyr,console = &cdc_acm_uart0;
+		zephyr,console = &zephyr_udc0;
 	};
 	
 	backlight: pwmleds {
