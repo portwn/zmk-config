@@ -11,6 +11,10 @@
 	model = "pechatalo";
 	compatible = "pechatalo,nrf52840";
 	
+	aliases {
+        pwm-led0 = &pwm_led0;
+    };
+	
 	chosen {
 		zephyr,code-partition = &code_partition;
 		zephyr,sram = &sram0;
@@ -24,7 +28,7 @@
 	backlight: pwmleds {
         compatible = "pwm-leds";
         label = "Backlight LEDs";
-		pwm_led_0 {
+		pwm_led0: pwm_led_0 {
             pwms = <&pwm0 24 10000 PWM_POLARITY_NORMAL>;
             label = "Backlight LED 1";
         };
