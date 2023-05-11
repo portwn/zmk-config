@@ -6,7 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
-#include "nrf52840_mdk-pinctrl.dtsi"
+#include "pechatalo_pinctrl.dtsi"
 
 / {
 	model = "pechatalo";
