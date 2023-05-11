@@ -6,6 +6,7 @@
 
 /dts-v1/;
 #include <nordic/nrf52840_qiaa.dtsi>
+#include "nrf52840_mdk-pinctrl.dtsi"
 
 / {
 	model = "pechatalo";
@@ -25,13 +26,16 @@
 		zephyr,console = &cdc_acm_uart;
 	};
 	
-	backlight: pwmleds {
-        compatible = "pwm-leds";
-        label = "Backlight LEDs";
-		pwm_led0: pwm_led_0 {
-            pwms = <&pwm0 24 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
-            label = "Backlight LED 1";
-        };
+	backlight: 	pwmleds {
+		compatible = "pwm-leds";
+		pwm_led0_green: pwm_led_0 {
+			pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Green PWM LED 0";
+		};
+		pwm_led1_red: pwm_led_1 {
+			pwms = <&pwm0 1 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Red PWM LED 1";
+		};
     };
 
 	vbatt: vbatt {
@@ -155,7 +159,8 @@
 };
 
 &pwm0 {
-    status = "okay";
-	ch0-pin = <24>;
-    /* ch0-inverted; */
+	status = "okay";
+	pinctrl-0 = <&pwm0_default>;
+	pinctrl-1 = <&pwm0_sleep>;
+	pinctrl-names = "default", "sleep";
 };
