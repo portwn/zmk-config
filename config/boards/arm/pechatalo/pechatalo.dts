@@ -10,6 +10,11 @@
 / {
 	model = "pechatalo";
 	compatible = "pechatalo,nrf52840";
+	
+	aliases {
+		pwm-led_0 = &pwm_led_0;
+		pwm-led_1 = &pwm_led_1;
+    };
 
 	chosen {
 		zephyr,code-partition = &code_partition;
