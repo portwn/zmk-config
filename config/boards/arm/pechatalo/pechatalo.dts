@@ -36,6 +36,10 @@
 			pwms = <&pwm0 2 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
 			label = "Blue PWM LED 2";
 		};
+		pwm_led3_red: pwm_led_3 {
+			pwms = <&pwm0 3 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+			label = "Blue PWM LED 3";
+		};
     };
 
 	vbatt: vbatt {
