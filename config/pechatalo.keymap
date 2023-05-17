@@ -39,7 +39,7 @@
 		 layer_lower {
             bindings = <
  	&bl BL_TOG  &bl BL_INC  &bl BL_DEC  &kp F3  &kp F4    &kp F5  &kp F6  &kp F7  &kp F8    &kp F9  &kp F10  &kp F11  &kp F12    &kp PSCRN  &kp SLCK  &kp PAUSE_BREAK
-	&BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL  &kp BSPC        &kp INS    &kp HOME  &kp PG_UP
+	&bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS &kp EQUAL  &kp BSPC        &kp INS    &kp HOME  &kp PG_UP
 	&kp TAB  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp LBKT  &kp RBKT  &kp BSLH	&kp DEL    &kp END   &kp PG_DN
 	&kp CLCK  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI &kp SQT           &kp RET
 	&kp LSHFT   &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH           &kp RSHFT		   &kp UP
