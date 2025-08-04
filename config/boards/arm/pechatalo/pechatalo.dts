@@ -103,13 +103,14 @@
 };
 */
 
+/*
 &i2c0 {
 	status = "disabled";
 	compatible = "nordic,nrf-twi";
 	sda-pin = <17>;
 	scl-pin = <20>;
 };
-
+*/
 
 &usbd {
 	compatible = "nordic,nrf-usbd";
